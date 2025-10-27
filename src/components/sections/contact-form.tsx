@@ -27,11 +27,15 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="bg-white py-16 md:py-24">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="relative bg-gradient-to-b from-white to-green-50/30 py-16 md:py-24 overflow-hidden">
+      {/* Decorative background */}
+      <div className="absolute -right-20 top-20 h-96 w-96 rounded-full bg-primary/5 blur-3xl animate-pulse-slow" />
+      <div className="absolute -left-20 bottom-20 h-96 w-96 rounded-full bg-accent/5 blur-3xl animate-pulse-slow" style={{animationDelay: '1s'}} />
+      
+      <div className="container relative mx-auto px-4">
         <div className="mx-auto max-w-2xl">
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold text-text md:text-4xl">
+          <div className="mb-12 text-center animate-slide-up">
+            <h2 className="mb-4 text-3xl font-bold text-text md:text-4xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Get in Touch
             </h2>
             <p className="text-lg text-text-light">
@@ -39,7 +43,7 @@ const ContactForm = () => {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6 animate-fade-in animate-delay-200">
             <div>
               <Label htmlFor="name">Name *</Label>
               <Input
