@@ -18,7 +18,11 @@
     "test:int": "cross-env NODE_OPTIONS=--no-deprecation vitest run --config ./vitest.config.mts",
     "verify": "node verify-setup.js",
     "setup:db": "node setup-database.js",
-    "test:admin": "node test-admin-setup.js"
+    "test:admin": "node test-admin-setup.js",
+    "setup:supabase": "node setup-supabase.js",
+    "deploy:vercel": "node deploy-vercel.js",
+    "migrate": "cross-env NODE_OPTIONS=--no-deprecation payload migrate",
+    "migrate:create": "cross-env NODE_OPTIONS=--no-deprecation payload migrate:create"
   },
   "dependencies": {
     "@payloadcms/db-postgres": "3.61.1",
@@ -26,6 +30,7 @@
     "@payloadcms/payload-cloud": "3.61.1",
     "@payloadcms/richtext-lexical": "3.61.1",
     "@payloadcms/ui": "3.61.1",
+    "@supabase/supabase-js": "^2.78.0",
     "cross-env": "^7.0.3",
     "dotenv": "16.4.7",
     "form-data": "^4.0.4",

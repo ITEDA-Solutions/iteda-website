@@ -40,4 +40,16 @@ export default buildConfig({
     payloadCloudPlugin(),
     // storage-adapter-placeholder
   ],
+  // Vercel-specific configuration
+  serverURL: process.env.NEXT_PUBLIC_PAYLOAD_URL || 'http://localhost:3000',
+  cors: [
+    process.env.NEXT_PUBLIC_PAYLOAD_URL || 'http://localhost:3000',
+    // Add your Vercel domain here
+    ...(process.env.VERCEL_URL ? [`https://${process.env.VERCEL_URL}`] : []),
+  ],
+  csrf: [
+    process.env.NEXT_PUBLIC_PAYLOAD_URL || 'http://localhost:3000',
+    // Add your Vercel domain here
+    ...(process.env.VERCEL_URL ? [`https://${process.env.VERCEL_URL}`] : []),
+  ],
 })
