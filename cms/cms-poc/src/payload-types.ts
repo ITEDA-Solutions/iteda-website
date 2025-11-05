@@ -90,9 +90,11 @@ export interface Config {
   };
   globals: {
     about: About;
+    'site-settings': SiteSetting;
   };
   globalsSelect: {
     about: AboutSelect<false> | AboutSelect<true>;
+    'site-settings': SiteSettingsSelect<false> | SiteSettingsSelect<true>;
   };
   locale: null;
   user: User & {
@@ -496,12 +498,60 @@ export interface About {
   createdAt?: string | null;
 }
 /**
+ * Manage site-wide settings including contact information and social media links
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "site-settings".
+ */
+export interface SiteSetting {
+  id: number;
+  /**
+   * Primary contact email address for the site
+   */
+  contactEmail: string;
+  /**
+   * Social media platform links
+   */
+  socialLinks?:
+    | {
+        /**
+         * Select the social media platform
+         */
+        platform: 'facebook' | 'twitter' | 'instagram' | 'linkedin' | 'youtube' | 'tiktok' | 'github';
+        /**
+         * Full URL to the social media profile
+         */
+        url: string;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "about_select".
  */
 export interface AboutSelect<T extends boolean = true> {
   mission?: T;
   vision?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "site-settings_select".
+ */
+export interface SiteSettingsSelect<T extends boolean = true> {
+  contactEmail?: T;
+  socialLinks?:
+    | T
+    | {
+        platform?: T;
+        url?: T;
+        id?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;

@@ -16,14 +16,16 @@ export const Media: CollectionConfig = {
   upload: {
     // Configure local file storage with static URL and directory settings (Requirement 5.2)
     staticDir: path.resolve(process.cwd(), 'media'),
-    staticURL: '/media',
     
     // Configure admin thumbnail display for uploaded images (Requirement 5.4)
     adminThumbnail: ({ doc }) => {
-      if (doc?.sizes?.thumbnail?.url) {
-        return doc.sizes.thumbnail.url
+      if (doc && typeof doc === 'object' && 'sizes' in doc && doc.sizes && typeof doc.sizes === 'object' && 'thumbnail' in doc.sizes) {
+        const thumbnail = doc.sizes.thumbnail as any
+        if (thumbnail?.url) {
+          return thumbnail.url
+        }
       }
-      return doc?.url || null
+      return (doc as any)?.url || null
     },
     
     // Set up automatic image resizing for card format (600x400) (Requirement 5.3)
@@ -68,8 +70,5 @@ export const Media: CollectionConfig = {
     
     // Configure file type restrictions for security
     mimeTypes: ['image/jpeg', 'image/png', 'image/webp', 'image/gif'],
-    
-    // Set file size limits (10MB max)
-    maxSize: 10 * 1024 * 1024,
   },
 }

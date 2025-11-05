@@ -1,38 +1,44 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  :root {
-    --focus-ring: 2px solid #2E865F;
-  }
+:root {
+  --focus-ring: 2px solid #2563eb;
+}
 
-  * {
-    @apply border-gray-200;
-  }
+body {
+  background-color: #f9fafb;
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-  body {
-    @apply bg-background text-text antialiased;
-  }
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: #111827;
+}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-bold text-text;
-  }
+a {
+  color: #2563eb;
+}
 
-  a {
-    @apply text-primary hover:underline;
-  }
+a:hover {
+  text-decoration: underline;
+}
 
-  *:focus-visible {
-    @apply outline-none ring-2 ring-primary ring-offset-2;
-  }
+*:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px #2563eb, 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
 
-  .skip-to-content {
-    @apply absolute -top-full left-0 z-50 bg-primary px-4 py-2 text-white focus:top-0;
-  }
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 50;
+  background-color: #2563eb;
+  padding: 0.5rem 1rem;
+  color: white;
+}
+
+.skip-to-content:focus {
+  top: 0;
 }

@@ -22,7 +22,9 @@
     "setup:supabase": "node setup-supabase.js",
     "deploy:vercel": "node deploy-vercel.js",
     "migrate": "cross-env NODE_OPTIONS=--no-deprecation payload migrate",
-    "migrate:create": "cross-env NODE_OPTIONS=--no-deprecation payload migrate:create"
+    "migrate:create": "cross-env NODE_OPTIONS=--no-deprecation payload migrate:create",
+    "setup:interactive": "node interactive-setup.js",
+    "check:deployment": "node check-deployment-status.js"
   },
   "dependencies": {
     "@payloadcms/db-postgres": "3.61.1",
