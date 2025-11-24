@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -26,23 +27,22 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Image */}
+          {/* Right Image - Real Solar Dryer Photo */}
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl bg-white p-4 shadow-xl">
-              <div className="aspect-[4/3] rounded-lg bg-gradient-to-br from-green-100 to-blue-100">
-                {/* Placeholder for product image */}
-                <div className="flex h-full items-center justify-center text-center">
-                  <div className="space-y-2">
-                    <div className="mx-auto h-24 w-24 rounded-full bg-primary/20" />
-                    <p className="text-sm text-text-light">
-                      Smart Solar Crop Dryer
-                    </p>
-                  </div>
-                </div>
+              <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
+                <Image
+                  src="/hero-solar-dryer.jpg"
+                  alt="ITEDA Smart Solar Crop Dryer in operation with farmer in agricultural field"
+                  fill
+                  className="object-cover"
+                  priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
               {/* IoT Badge */}
               <div className="absolute bottom-6 left-6 flex items-center gap-2 rounded-lg bg-white px-4 py-2 shadow-md">
-                <div className="h-8 w-8 rounded-lg bg-primary" />
+                <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
                 <div>
                   <p className="text-xs font-semibold text-text">
                     IoT Connected
