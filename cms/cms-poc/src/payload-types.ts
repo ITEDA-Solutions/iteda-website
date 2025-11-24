@@ -230,7 +230,7 @@ export interface Homepage {
   createdAt: string;
 }
 /**
- * Manage product listings with images and descriptions
+ * Manage detailed product pages with images, features, and specifications
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "products".
@@ -242,15 +242,102 @@ export interface Product {
    */
   name: string;
   /**
-   * Product description (optional)
+   * URL-friendly slug (e.g., smart-solar-crop-dryer)
+   */
+  slug: string;
+  /**
+   * Short tagline or subtitle
+   */
+  tagline: string;
+  /**
+   * Icon to display for this product
+   */
+  icon: 'sun' | 'credit-card' | 'smartphone' | 'leaf' | 'zap';
+  /**
+   * Detailed product overview (required)
+   */
+  overview: string;
+  /**
+   * Main product image
+   */
+  featuredImage?: (number | null) | Media;
+  /**
+   * Additional product images for gallery
+   */
+  gallery?:
+    | {
+        image: number | Media;
+        /**
+         * Optional image caption
+         */
+        caption?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  /**
+   * List of key product features
+   */
+  features: {
+    feature: string;
+    id?: string | null;
+  }[];
+  /**
+   * Product specifications (key-value pairs)
+   */
+  specifications?:
+    | {
+        /**
+         * e.g., "Power Source" or "Capacity"
+         */
+        spec: string;
+        /**
+         * e.g., "Solar panels (300W)" or "100-500kg"
+         */
+        value: string;
+        id?: string | null;
+      }[]
+    | null;
+  /**
+   * List of common use cases
+   */
+  useCases?:
+    | {
+        useCase: string;
+        id?: string | null;
+      }[]
+    | null;
+  /**
+   * Text for the main call-to-action button
+   */
+  ctaText?: string | null;
+  /**
+   * URL for the main call-to-action button
+   */
+  ctaLink?: string | null;
+  seo?: {
+    /**
+     * Custom meta title (optional, defaults to product name)
+     */
+    metaTitle?: string | null;
+    /**
+     * Custom meta description (optional, defaults to overview)
+     */
+    metaDescription?: string | null;
+    /**
+     * Open Graph image for social sharing
+     */
+    ogImage?: (number | null) | Media;
+  };
+  /**
+   * Short description (legacy field)
    */
   description?: string | null;
   /**
-   * Product image (optional)
+   * Product image (legacy field)
    */
   image?: (number | null) | Media;
   /**
-   * External link URL (optional)
+   * External link (legacy field)
    */
   link?: string | null;
   updatedAt: string;
@@ -412,6 +499,46 @@ export interface HomepageSelect<T extends boolean = true> {
  */
 export interface ProductsSelect<T extends boolean = true> {
   name?: T;
+  slug?: T;
+  tagline?: T;
+  icon?: T;
+  overview?: T;
+  featuredImage?: T;
+  gallery?:
+    | T
+    | {
+        image?: T;
+        caption?: T;
+        id?: T;
+      };
+  features?:
+    | T
+    | {
+        feature?: T;
+        id?: T;
+      };
+  specifications?:
+    | T
+    | {
+        spec?: T;
+        value?: T;
+        id?: T;
+      };
+  useCases?:
+    | T
+    | {
+        useCase?: T;
+        id?: T;
+      };
+  ctaText?: T;
+  ctaLink?: T;
+  seo?:
+    | T
+    | {
+        metaTitle?: T;
+        metaDescription?: T;
+        ogImage?: T;
+      };
   description?: T;
   image?: T;
   link?: T;

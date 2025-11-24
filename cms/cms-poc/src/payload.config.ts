@@ -42,14 +42,22 @@ export default buildConfig({
     // storage-adapter-placeholder
   ],
   // Vercel-specific configuration
-  serverURL: process.env.NEXT_PUBLIC_PAYLOAD_URL || 'http://localhost:3000',
+  serverURL: process.env.NEXT_PUBLIC_PAYLOAD_URL || 'http://localhost:3001',
   cors: [
-    process.env.NEXT_PUBLIC_PAYLOAD_URL || 'http://localhost:3000',
+    'http://localhost:3000',
+    'http://localhost:3001',
+    'https://iteda-website.vercel.app', // Production frontend
+    'https://iteda-website-*.vercel.app', // Preview deployments
+    process.env.NEXT_PUBLIC_PAYLOAD_URL || 'http://localhost:3001',
     // Add your Vercel domain here
     ...(process.env.VERCEL_URL ? [`https://${process.env.VERCEL_URL}`] : []),
   ],
   csrf: [
-    process.env.NEXT_PUBLIC_PAYLOAD_URL || 'http://localhost:3000',
+    'http://localhost:3000',
+    'http://localhost:3001',
+    'https://iteda-website.vercel.app', // Production frontend
+    'https://iteda-website-*.vercel.app', // Preview deployments
+    process.env.NEXT_PUBLIC_PAYLOAD_URL || 'http://localhost:3001',
     // Add your Vercel domain here
     ...(process.env.VERCEL_URL ? [`https://${process.env.VERCEL_URL}`] : []),
   ],

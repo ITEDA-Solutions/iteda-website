@@ -1,5 +1,5 @@
 import Hero from "@/components/sections/hero";
-import ContactForm from "@/components/sections/contact-form";
+import ContactForm from "@/components/sections/contact-form-enhanced";
 import HomepageCMSContent from "@/components/sections/homepage-cms-content";
 import { Suspense } from "react";
 import HomepageLoading from "@/components/ui/homepage-loading";

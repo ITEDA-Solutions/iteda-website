@@ -1,8 +1,22 @@
 import { notFound } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { ImageGallery } from "@/components/ui/image-gallery";
 import Link from "next/link";
-import { Sun, CreditCard, Check } from "lucide-react";
+import Image from "next/image";
+import { Sun, CreditCard, Check, Smartphone, Leaf, Zap } from "lucide-react";
 import type { Metadata } from "next";
+
+const PAYLOAD_URL = process.env.NEXT_PUBLIC_PAYLOAD_URL || "http://localhost:3001";
+
+// Map icon names to Lucide components
+const iconMap = {
+  sun: Sun,
+  "credit-card": CreditCard,
+  smartphone: Smartphone,
+  leaf: Leaf,
+  zap: Zap,
+};
 
 const products = {
   "smart-solar-crop-dryer": {
