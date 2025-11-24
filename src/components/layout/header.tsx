@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -21,12 +22,15 @@ const Header = () => {
         className="container mx-auto flex h-16 items-center justify-between px-4"
         aria-label="Main navigation"
       >
-        <Link
-          href="/"
-          className="flex items-center gap-2 text-2xl font-bold text-text hover:no-underline"
-        >
-          <div className="h-8 w-8 rounded-lg bg-primary" />
-          <span>ITEDA <span className="text-primary">Solutions</span></span>
+        <Link href="/" className="flex items-center hover:no-underline">
+          <Image
+            src="/logo.png"
+            alt="ITEDA Solutions - IoT Innovation for Agriculture"
+            width={200}
+            height={50}
+            className="h-10 w-auto md:h-12"
+            priority
+          />
         </Link>
 
         <ul className="hidden items-center gap-8 md:flex">

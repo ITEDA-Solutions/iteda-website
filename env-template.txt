@@ -1,0 +1,39 @@
+# ====================================
+# ITEDA Website - Environment Variables
+# ====================================
+
+# ----------------
+# Email Service
+# ----------------
+# Get your API key from: https://resend.com/api-keys
+RESEND_API_KEY=re_your_api_key_here
+
+# Email addresses
+COMPANY_EMAIL=info@itedasolutions.com
+FROM_EMAIL=noreply@itedasolutions.com
+
+# ----------------
+# CAPTCHA (Optional)
+# ----------------
+# Get keys from: https://dash.cloudflare.com (Turnstile)
+NEXT_PUBLIC_TURNSTILE_SITE_KEY=your_site_key_here
+TURNSTILE_SECRET_KEY=your_secret_key_here
+
+# ----------------
+# CMS Connection
+# ----------------
+# Point to your deployed CMS or local dev server
+NEXT_PUBLIC_PAYLOAD_URL=http://localhost:3001
+
+# ----------------
+# Analytics (Optional)
+# ----------------
+# NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+# NEXT_PUBLIC_HOTJAR_ID=xxxxxxx
+
+# ----------------
+# Notes
+# ----------------
+# 1. Never commit this file to Git! It's in .gitignore
+# 2. For production, add these to Vercel Dashboard
+# 3. Restart dev server after changing values

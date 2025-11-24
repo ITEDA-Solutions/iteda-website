@@ -45,7 +45,7 @@ const ContactForm = () => {
     subject: "",
     message: "",
   });
-  
+
   const [errors, setErrors] = useState<FormErrors>({});
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
@@ -57,7 +57,7 @@ const ContactForm = () => {
   // Load Cloudflare Turnstile script
   useEffect(() => {
     const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
-    
+
     if (!siteKey) {
       console.warn('NEXT_PUBLIC_TURNSTILE_SITE_KEY not configured');
       return;
@@ -126,7 +126,7 @@ const ContactForm = () => {
   // Handle input change with validation
   const handleChange = (name: keyof FormData, value: string) => {
     setFormData(prev => ({ ...prev, [name]: value }));
-    
+
     // Clear error when user starts typing
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: undefined }));
@@ -144,7 +144,7 @@ const ContactForm = () => {
   // Validate all fields
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
-    
+
     (Object.keys(formData) as Array<keyof FormData>).forEach(key => {
       const error = validateField(key, formData[key]);
       if (error) {
@@ -159,11 +159,11 @@ const ContactForm = () => {
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Reset messages
     setErrorMessage("");
     setSuccessMessage("");
-    
+
     // Validate form
     if (!validateForm()) {
       setErrorMessage("Please fix the errors in the form");
@@ -189,7 +189,7 @@ const ContactForm = () => {
       if (response.ok) {
         setStatus("success");
         setSuccessMessage(data.message || "Thank you! We'll get back to you soon.");
-        
+
         // Reset form
         setFormData({
           name: "",
@@ -199,13 +199,13 @@ const ContactForm = () => {
           subject: "",
           message: "",
         });
-        
+
         // Reset CAPTCHA
         if (window.turnstile && captchaWidgetId) {
           window.turnstile.reset(captchaWidgetId);
         }
         setCaptchaToken("");
-        
+
         // Reset status after 5 seconds
         setTimeout(() => {
           setStatus("idle");
@@ -213,7 +213,7 @@ const ContactForm = () => {
         }, 5000);
       } else {
         setStatus("error");
-        
+
         if (response.status === 429) {
           setErrorMessage(`Too many requests. Please try again in ${data.resetIn || 60} seconds.`);
         } else if (data.details) {
@@ -414,25 +414,35 @@ const ContactForm = () => {
             )}
 
             {/* Submit Button */}
-            <Button
-              type="submit"
-              className="w-full"
-              disabled={status === "submitting"}
-              size="lg"
-            >
-              {status === "submitting" ? (
-                <>
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  Sending...
-                </>
-              ) : (
-                "Send Message"
-              )}
-            </Button>
+            <div className="mt-8 space-y-4">
+              <Button
+                type="submit"
+                className="w-full bg-primary hover:bg-primary-dark text-white font-bold shadow-lg"
+                disabled={status === "submitting"}
+                size="lg"
+                style={{
+                  backgroundColor: "#028037",
+                  color: "white",
+                  padding: "16px 32px",
+                  fontSize: "18px",
+                  minHeight: "56px",
+                  zIndex: 10,
+                }}
+              >
+                {status === "submitting" ? (
+                  <>
+                    <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                    Sending Message...
+                  </>
+                ) : (
+                  "Send Message"
+                )}
+              </Button>
 
-            <p className="text-center text-sm text-black/50">
-              * Required fields
-            </p>
+              <p className="text-center text-sm text-black/50">
+                * Required fields
+              </p>
+            </div>
           </form>
         </div>
       </div>
