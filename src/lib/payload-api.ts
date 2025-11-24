@@ -19,6 +19,7 @@ export interface AboutContent {
 export interface Product {
   id: string;
   name: string;
+  slug: string;
   description: any; // Rich text content
   image?: {
     url: string;
@@ -60,20 +61,20 @@ async function fetchFromPayload<T>(endpoint: string, retries = 2): Promise<T> {
       return data;
     } catch (error) {
       lastError = error instanceof Error ? error : new Error(`Unknown error fetching ${endpoint}`);
-      
+
       // Only log errors in development to avoid console spam in production
       if (process.env.NODE_ENV === 'development') {
         console.warn(`CMS API attempt ${attempt + 1} failed for ${endpoint}:`, lastError.message);
       }
-      
+
       // If this is the last attempt, throw the error
       if (attempt === retries) {
-        const errorMessage = lastError.message.includes('Failed to fetch') 
+        const errorMessage = lastError.message.includes('Failed to fetch')
           ? `CMS server is not available at ${PAYLOAD_URL}. Please ensure the CMS is running.`
           : `Failed to fetch ${endpoint} after ${retries + 1} attempts: ${lastError.message}`;
         throw new Error(errorMessage);
       }
-      
+
       // Wait before retrying (exponential backoff)
       await new Promise(resolve => setTimeout(resolve, Math.pow(2, attempt) * 1000));
     }
