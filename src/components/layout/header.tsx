@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -16,25 +17,28 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-gray-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-sm animate-slide-up">
+    <header className="sticky top-0 z-40 w-full border-b border-gray-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <nav
         className="container mx-auto flex h-16 items-center justify-between px-4"
         aria-label="Main navigation"
       >
-        <Link
-          href="/"
-          className="flex items-center gap-2 text-2xl font-bold text-text hover:no-underline transition-transform hover:scale-105"
-        >
-          <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-primary to-accent animate-pulse-slow" />
-          <span>ITEDA <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Solutions</span></span>
+        <Link href="/" className="flex items-center hover:no-underline">
+          <Image
+            src="/logo.png"
+            alt="ITEDA Solutions - IoT Innovation for Agriculture"
+            width={200}
+            height={50}
+            className="h-10 w-auto md:h-12"
+            priority
+          />
         </Link>
 
         <ul className="hidden items-center gap-8 md:flex">
-          {navigation.map((item, idx) => (
-            <li key={item.name} className="animate-fade-in" style={{animationDelay: `${idx * 50}ms`}}>
+          {navigation.map((item) => (
+            <li key={item.name}>
               <Link
                 href={item.href}
-                className="relative text-text-light transition-all hover:text-primary hover:no-underline after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-gradient-to-r after:from-primary after:to-accent after:transition-all hover:after:w-full"
+                className="text-text-light transition-colors hover:text-primary hover:no-underline"
               >
                 {item.name}
               </Link>
@@ -43,13 +47,13 @@ const Header = () => {
         </ul>
 
         <button
-          className="md:hidden transition-transform hover:scale-110"
+          className="md:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           aria-expanded={isMenuOpen}
         >
           {isMenuOpen ? (
-            <X className="h-6 w-6 text-primary" />
+            <X className="h-6 w-6" />
           ) : (
             <Menu className="h-6 w-6" />
           )}
@@ -57,13 +61,13 @@ const Header = () => {
       </nav>
 
       {isMenuOpen && (
-        <div className="border-t border-gray-200 bg-white md:hidden animate-slide-up">
+        <div className="border-t border-gray-200 bg-white md:hidden">
           <ul className="container mx-auto flex flex-col gap-4 px-4 py-6">
-            {navigation.map((item, idx) => (
-              <li key={item.name} className="animate-slide-in-left" style={{animationDelay: `${idx * 50}ms`}}>
+            {navigation.map((item) => (
+              <li key={item.name}>
                 <Link
                   href={item.href}
-                  className="block text-lg text-text hover:text-primary hover:no-underline transition-all hover:translate-x-2"
+                  className="block text-lg text-text hover:text-primary hover:no-underline"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}

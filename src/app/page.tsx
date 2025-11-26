@@ -1,14 +1,22 @@
 import Hero from "@/components/sections/hero";
-import Mission from "@/components/sections/mission";
-import ProductsGrid from "@/components/sections/products-grid";
-import ContactForm from "@/components/sections/contact-form";
+import ContactForm from "@/components/sections/contact-form-enhanced";
+import HomepageCMSContent from "@/components/sections/homepage-cms-content";
+import { Suspense } from "react";
+import HomepageLoading from "@/components/ui/homepage-loading";
+import ErrorBoundary from "@/components/ui/error-boundary";
+import CMSErrorFallback from "@/components/ui/cms-error-fallback";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <Mission />
-      <ProductsGrid />
+      
+      <ErrorBoundary fallback={<CMSErrorFallback />}>
+        <Suspense fallback={<HomepageLoading />}>
+          <HomepageCMSContent />
+        </Suspense>
+      </ErrorBoundary>
+
       <ContactForm />
     </>
   );

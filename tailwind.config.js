@@ -8,20 +8,33 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // Primary Colors
         primary: {
-          DEFAULT: "#2E865F",
-          dark: "#246B4C",
-          light: "#3FA675",
+          DEFAULT: "#028037", // Primary Green
+          dark: "#01443e",    // Dark Teal (Secondary)
+          light: "#2E9F5F",   // Lighter shade of primary green
         },
-        accent: "#1E5A42",
-        background: "#F5F5F0",
-        muted: "#6B7280",
-        success: "#10B981",
-        danger: "#EF4444",
+        // Accent Colors
+        accent: {
+          DEFAULT: "#FCD85D", // Primary Yellow
+          gold: "#aa9241",    // Secondary Gold
+        },
+        // Neutral Colors
+        black: "#060606",     // Primary Black
+        background: "#FFFFFF", // White background
+        muted: "#6B7280",     // Gray for muted text
+        // Status Colors
+        success: "#028037",   // Use primary green
+        danger: "#EF4444",    // Red for errors
+        warning: "#FCD85D",   // Use primary yellow
+        // Text Colors
         text: {
-          DEFAULT: "#1F2937",
-          light: "#6B7280",
+          DEFAULT: "#060606", // Primary black for text
+          light: "#6B7280",   // Gray for secondary text
+          muted: "#9CA3AF",   // Lighter gray
         },
+        // Border Colors
+        border: "#E5E7EB",    // Light gray for borders
       },
     },
   },

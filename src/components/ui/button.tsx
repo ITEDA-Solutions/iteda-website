@@ -5,7 +5,7 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   asChild?: boolean;
   variant?: "default" | "outline" | "ghost" | "link";
-  size?: "default" | "sm" | "lg";
+  size?: "default" | "sm" | "lg" | "icon";
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -25,6 +25,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       default: "h-10 px-6 py-2",
       sm: "h-9 rounded-md px-3 text-sm",
       lg: "h-12 rounded-md px-8 text-lg",
+      icon: "h-10 w-10",
     };
 
     if (asChild) {
