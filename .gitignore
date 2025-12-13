@@ -9,6 +9,8 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+node_modules/   
+.next/
 
 # testing
 /coverage
@@ -61,3 +63,21 @@ test-*.js
 check-*.js
 fix-*.js
 *-SUMMARY.md
+
+
+# Development Files
+.vscode/
+.idea/
+.claude/
+dev-docs/
+
+# Development documentation and scripts (keep in dev-docs/)
+/*.md
+!README.md
+/*.js
+!next.config.js
+!postcss.config.js
+!tailwind.config.js
+/*.ps1
+/todo
+/*.code-workspace
