@@ -69,11 +69,11 @@ fix-*.js
 .vscode/
 .idea/
 .claude/
-dev-docs/
+dev-docs/*
+!dev-docs/.gitkeep
 
 # Development documentation and scripts (keep in dev-docs/)
 /*.md
-!README.md
 /*.js
 !next.config.js
 !postcss.config.js
