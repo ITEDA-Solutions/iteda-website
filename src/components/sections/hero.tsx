@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -15,9 +16,9 @@ const Hero = () => {
           {/* Left Content */}
           <div className="space-y-6 animate-slide-in-left">
             <h1 className="text-4xl font-bold leading-tight text-text md:text-5xl lg:text-6xl">
-              Smart Solar IoT for{" "}
+              Smart Solar{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Sustainable Agriculture
+                Crop Dryer
               </span>
             </h1>
             <p className="text-lg text-text-light md:text-xl animate-fade-in animate-delay-200">
@@ -37,18 +38,15 @@ const Hero = () => {
           {/* Right Image */}
           <div className="relative animate-slide-in-right">
             <div className="relative overflow-hidden rounded-2xl bg-white p-4 shadow-xl hover-lift">
-              <div className="aspect-[4/3] rounded-lg bg-gradient-to-br from-green-100 via-blue-100 to-green-100">
-                {/* Placeholder for product image */}
-                <div className="flex h-full items-center justify-center text-center">
-                  <div className="space-y-2 animate-float">
-                    <div className="mx-auto h-24 w-24 rounded-full bg-gradient-to-br from-primary to-accent p-6 shadow-lg">
-                      <div className="h-full w-full rounded-full bg-white/30" />
-                    </div>
-                    <p className="text-sm font-medium text-text-light">
-                      Smart Solar Crop Dryer
-                    </p>
-                  </div>
-                </div>
+              <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                <Image
+                  src="/hero-solar-dryer.jpg"
+                  alt="Smart Solar Crop Dryer - ITEDA Solutions IoT agricultural technology"
+                  width={800}
+                  height={600}
+                  className="object-cover w-full h-full"
+                  priority
+                />
               </div>
               {/* IoT Badge */}
               <div className="absolute bottom-6 left-6 flex items-center gap-2 rounded-lg bg-white px-4 py-2 shadow-lg animate-scale-in animate-delay-400 hover-lift">

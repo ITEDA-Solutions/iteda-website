@@ -10,10 +10,10 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: "GitHub", href: "#", icon: Github },
-    { name: "LinkedIn", href: "#", icon: Linkedin },
-    { name: "Twitter", href: "#", icon: Twitter },
-    { name: "Email", href: "mailto:info@itedasolutions.com", icon: Mail },
+    { name: "GitHub", href: "https://github.com/ITEDA-Solutions", icon: Github },
+    { name: "LinkedIn", href: "https://www.linkedin.com/company/iteda-solutions/", icon: Linkedin },
+    { name: "Twitter", href: "https://x.com/ItedaSolutions", icon: Twitter },
+    { name: "Email", href: "mailto:itedasolutions@gmail.com", icon: Mail },
   ];
 
   return (

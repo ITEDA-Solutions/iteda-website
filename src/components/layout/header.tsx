@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,8 +26,14 @@ const Header = () => {
           href="/"
           className="flex items-center gap-2 text-2xl font-bold text-text hover:no-underline transition-transform hover:scale-105"
         >
-          <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-primary to-accent animate-pulse-slow" />
-          <span>ITEDA <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Solutions</span></span>
+          <Image
+            src="/logo.png"
+            alt="ITEDA Solutions Logo"
+            width={40}
+            height={40}
+            className="h-10 w-auto"
+            priority
+          />
         </Link>
 
         <ul className="hidden items-center gap-8 md:flex">

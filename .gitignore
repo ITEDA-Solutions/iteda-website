@@ -9,6 +9,8 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+node_modules/   
+.next/
 
 # testing
 /coverage
@@ -39,3 +41,45 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# CMS Environment Files
+cms/cms-poc/.env
+cms/cms-poc/.env.local
+
+# CMS Media Uploads
+cms/cms-poc/media/*
+!cms/cms-poc/media/.gitkeep
+
+# CMS Build Files
+cms/cms-poc/.next/
+cms/cms-poc/dist/
+
+# CMS Node Modules (if separate)
+cms/cms-poc/node_modules/
+
+# Verification Scripts (temporary)
+verify-*.js
+test-*.js
+check-*.js
+fix-*.js
+*-SUMMARY.md
+
+
+# Development Files
+.vscode/
+.idea/
+.claude/
+dev-docs/*
+!dev-docs/.gitkeep
+
+# Development documentation and scripts (keep in dev-docs/)
+/*.md
+/*.js
+!next.config.js
+!postcss.config.js
+!tailwind.config.js
+/*.ps1
+/todo
+/*.code-workspace
+.kiro/
+temp-backup/

@@ -13,25 +13,25 @@ const ProductsGrid = () => {
       icon: Sun,
       features: [
         "Solar-powered operation",
-        "Real-time monitoring",
+        "Remote monitoring",
         "Automated climate control",
-        "Mobile app integration",
+        "Real-time Data Collection",
       ],
     },
-    {
-      id: 2,
-      name: "bridGe Payment Add-on",
-      slug: "bridge-payment-addon",
-      description:
-        "Seamless payment solution integrated with agricultural equipment, enabling easy transactions and financial tracking for farmers.",
-      icon: CreditCard,
-      features: [
-        "Secure transactions",
-        "Multiple payment methods",
-        "Transaction history",
-        "Low fees",
-      ],
-    },
+    // {
+    //   id: 2,
+    //   name: "bridGe Payment Add-on",
+    //   slug: "bridge-payment-addon",
+    //   description:
+    //     "Seamless payment solution integrated with agricultural equipment, enabling easy transactions and financial tracking for farmers.",
+    //   icon: CreditCard,
+    //   features: [
+    //     "Secure transactions",
+    //     "Multiple payment methods",
+    //     "Transaction history",
+    //     "Low fees",
+    //   ],
+    // },
   ];
 
   return (
