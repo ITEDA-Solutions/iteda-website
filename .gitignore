@@ -81,3 +81,4 @@ dev-docs/
 /*.ps1
 /todo
 /*.code-workspace
+.kiro/
