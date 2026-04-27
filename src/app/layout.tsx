@@ -48,7 +48,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+<<<<<<< HEAD
       <body>
+=======
+      <body suppressHydrationWarning>
+>>>>>>> 857141d (Initial commit: ITEDA Solutions website with Our Story page)
         <a href="#main-content" className="skip-to-content">
           Skip to content
         </a>
