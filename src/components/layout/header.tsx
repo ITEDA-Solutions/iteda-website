@@ -12,10 +12,7 @@ const Header = () => {
     { name: "Home", href: "/" },
     { name: "Products", href: "/#products" },
     { name: "About", href: "/#mission" },
-<<<<<<< HEAD
-=======
     { name: "Our Story", href: "/our-story" },
->>>>>>> 857141d (Initial commit: ITEDA Solutions website with Our Story page)
     { name: "FAQ", href: "/faq" },
     { name: "Contact", href: "/#contact" },
   ];
