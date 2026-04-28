@@ -8,10 +8,6 @@ import {
 } from '@/emails/templates';
 import { render } from '@react-email/components';
 
-// Initialize Resend (Vercel's recommended email provider)
-// Note: Vercel integrates seamlessly with Resend for email delivery
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 // Validation schema
 const contactFormSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters').max(100, 'Name is too long'),
@@ -131,6 +127,7 @@ export async function POST(request: NextRequest) {
         { status: 500 }
       );
     }
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     const companyEmail = process.env.COMPANY_EMAIL || 'info@itedasolutions.com';
     const fromEmail = process.env.FROM_EMAIL || 'noreply@itedasolutions.com';
