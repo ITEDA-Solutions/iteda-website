@@ -98,38 +98,22 @@ const teamMembers = [
   },
 ];
 
-const values = [
+const missionVision = [
   {
-    title: "Farmer First",
+    title: "Our Mission",
     description:
-      "Every feature, every product decision starts with one question: how does this make a farmer's life better?",
-    emoji: "🌾",
+      "Empowering farmers with smart sustainable infrastructure to increase productivity, enhance climate resilience, and strengthen livelihoods.",
+    emoji: "🎯",
     bg: "from-primary/10 to-primary/5",
     border: "border-primary/20",
   },
   {
-    title: "Radical Simplicity",
+    title: "Our Vision",
     description:
-      "Technology should be invisible. If a solution is hard to use, it isn't done yet.",
-    emoji: "✨",
+      "A thriving agricultural ecosystem where farmers leverage smart, sustainable infrastructure to maximize productivity, secure prosperous livelihoods, and enhance climate resilience for all communities.",
+    emoji: "🌍",
     bg: "from-accent/20 to-accent/5",
     border: "border-accent/30",
-  },
-  {
-    title: "Sustainable Impact",
-    description:
-      "Solar-powered, low-waste, and designed for the long run — the planet is our biggest stakeholder.",
-    emoji: "♻️",
-    bg: "from-primary-light/10 to-primary/5",
-    border: "border-primary-light/20",
-  },
-  {
-    title: "Transparent Partnership",
-    description:
-      "We build with communities, not for them. Trust is earned through honesty, not promises.",
-    emoji: "🤝",
-    bg: "from-accent-gold/10 to-accent/5",
-    border: "border-accent-gold/20",
   },
 ];
 
@@ -673,29 +657,29 @@ export default function OurStoryPage() {
         </div>
       </section>
 
-      {/* ── VALUES ───────────────────────────────────────────────────────── */}
+      {/* ── MISSION & VISION ───────────────────────────────────────────────── */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-5xl">
             <div className="mb-14 text-center">
               <h2 className="text-3xl font-bold md:text-4xl bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent inline-block">
-                What We Stand For
+                Our Mission & Vision
               </h2>
               <div className="mt-2 mx-auto h-1 w-20 rounded-full bg-gradient-to-r from-accent to-primary" />
             </div>
 
-            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              {values.map((v) => (
+            <div className="grid gap-6 md:grid-cols-2">
+              {missionVision.map((mv) => (
                 <div
-                  key={v.title}
-                  className={`group rounded-2xl bg-gradient-to-br ${v.bg} border ${v.border} p-6 hover:-translate-y-1.5 hover:shadow-lg transition-all duration-300`}
+                  key={mv.title}
+                  className={`group rounded-2xl bg-gradient-to-br ${mv.bg} border ${mv.border} p-8 hover:-translate-y-1.5 hover:shadow-lg transition-all duration-300`}
                 >
-                  <div className="mb-4 text-4xl">{v.emoji}</div>
-                  <h3 className="mb-2 font-bold text-text group-hover:text-primary transition-colors">
-                    {v.title}
+                  <div className="mb-4 text-5xl">{mv.emoji}</div>
+                  <h3 className="mb-3 font-bold text-text text-xl group-hover:text-primary transition-colors">
+                    {mv.title}
                   </h3>
-                  <p className="text-sm text-text-light leading-relaxed">
-                    {v.description}
+                  <p className="text-base text-text-light leading-relaxed">
+                    {mv.description}
                   </p>
                 </div>
               ))}
