@@ -119,70 +119,42 @@ const missionVision = [
 
 const publications = [
   {
-    type: "External",
-    title: "Efficiency for Access Design Challenge Winners",
-    excerpt:
-      "ITEDA Solutions wins Silver Award in the prestigious global competition for clean energy access innovations.",
-    date: "2024",
-    readTime: "View article",
-    icon: ExternalLink,
-    tag: "Award",
-    tagBg: "bg-primary/10",
-    tagText: "text-primary",
-    accentBorder: "border-l-primary",
-    href: "https://efficiencyforaccess.org/efficiency-for-access-design-challenge-winning-teams/",
-  },
-  {
-    type: "External",
-    title: "Strathmore Students Poised to Shine",
-    excerpt:
-      "Team emerges 4th in the Ideas Festival competition, showcasing innovation on the global sustainability stage.",
-    date: "2024",
-    readTime: "View article",
-    icon: ExternalLink,
-    tag: "Competition",
-    tagBg: "bg-blue-50",
-    tagText: "text-blue-700",
-    accentBorder: "border-l-blue-400",
-    href: "https://strathmore.edu/news-articles/strathmore-students-poised-to-shine-at-global-sustainability-competition/",
-  },
-  {
-    type: "External",
+    type: "Official",
     title: "Strathmore Students' Solar Innovation Takes Top Prize",
     excerpt:
-      "Team wins the Tricontinental Hackathon at the University of Notre Dame with their smart solar crop dryer.",
+      "Strathmore University official news covers ITEDA's major victory at the University of Notre Dame, profiling Job Ian Onyango and Ronit Mepani and detailing how their solar-powered smart cereal dryer aims to serve 2,000 farmers.",
     date: "2025",
     readTime: "View article",
     icon: ExternalLink,
-    tag: "Achievement",
+    tag: "University News",
+    tagBg: "bg-primary/10",
+    tagText: "text-primary",
+    accentBorder: "border-l-primary",
+    href: "https://strathmore.edu/news-articles/strathmore-students-solar-innovation-takes-top-prize-go4zf?lipi=urn%3Ali%3Apage%3Ad_flagship3_series_entity%3BxqkVV7VDSv2vFUIxKpZtWA%3D%3D",
+  },
+  {
+    type: "Official",
+    title: "Efficiency for Access Accelerator Programme",
+    excerpt:
+      "Program updates officially published ITEDA Solutions as part of the second cohort of its Challenge-adjacent Accelerator Programme, celebrating the development of affordable, high-performing off-grid appliances.",
+    date: "2025",
+    readTime: "View article",
+    icon: ExternalLink,
+    tag: "Program Feature",
     tagBg: "bg-accent/20",
     tagText: "text-accent-gold",
     accentBorder: "border-l-accent",
-    href: "https://www.linkedin.com/pulse/strathmore-students-solar-innovation-takes-top-prize-go4zf?lipi=urn%3Ali%3Apage%3Ad_flagship3_series_entity%3BxqkVV7VDSv2vFUIxKpZtWA%3D%3D",
-  },
-  {
-    type: "External",
-    title: "Efficiency for Access Accelerator Programme",
-    excerpt:
-      "ITEDA Solutions secures Large Grant and joins the prestigious 2024-2025 accelerator programme.",
-    date: "2025",
-    readTime: "View article",
-    icon: ExternalLink,
-    tag: "Grant",
-    tagBg: "bg-primary/10",
-    tagText: "text-primary",
-    accentBorder: "border-l-primary",
     href: "https://efficiencyforaccess.org/efficiency-for-access-design-challenge-2024-2025/accelerator-programme/",
   },
   {
-    type: "External",
-    title: "Energy Catalyst News Feature",
+    type: "Official",
+    title: "Energy Catalyst (UKRI) - Accelerator Cohort Profile",
     excerpt:
-      "UK government highlights Efficiency for Access Design Challenge Accelerator Programme participants.",
-    date: "2024",
+      "Article profiling ITEDA's full team (Job, Isaiah, Ruman, Ronit, and Emmanuel) and detailing the technical mechanics of their microcontroller and sensor-operated system as part of the 2025 Efficiency for Access Design Challenge Accelerator Programme.",
+    date: "2025",
     readTime: "View article",
     icon: ExternalLink,
-    tag: "Media",
+    tag: "Technical Profile",
     tagBg: "bg-primary-dark/10",
     tagText: "text-primary-dark",
     accentBorder: "border-l-primary-dark",
@@ -190,9 +162,9 @@ const publications = [
   },
   {
     type: "Social",
-    title: "Efficiency for Access Coalition Twitter",
+    title: "Strathmore University #ResearchWednesday",
     excerpt:
-      "Official announcement and recognition of ITEDA Solutions' achievements in the design challenge.",
+      "Dedicated Facebook post highlighted ITEDA Solutions under their #ResearchWednesday campaign, celebrating the game-changing potential of the dryer in combating food security and empowering women in agriculture.",
     date: "2024",
     readTime: "View post",
     icon: Link2,
@@ -200,7 +172,49 @@ const publications = [
     tagBg: "bg-blue-50",
     tagText: "text-blue-700",
     accentBorder: "border-l-blue-400",
-    href: "https://x.com/EforA_Coalition/status/1803005964846592050?s=20",
+    href: "https://www.facebook.com/StrathmoreUniversity",
+  },
+  {
+    type: "Social",
+    title: "Strathmore Research & Innovation",
+    excerpt:
+      "Instagram video reels and posts featured the team celebrating their top-spot victory at the Tri-Continental Student Innovation for Sustainability Competition.",
+    date: "2025",
+    readTime: "View post",
+    icon: Link2,
+    tag: "Social Media",
+    tagBg: "bg-blue-50",
+    tagText: "text-blue-700",
+    accentBorder: "border-l-blue-400",
+    href: "https://www.instagram.com/strathmoreresearch",
+  },
+  {
+    type: "Social",
+    title: "Kenya Climate Innovation Center (KCIC)",
+    excerpt:
+      "LinkedIn post references ITEDA's journey to building their first physical proof of concept, highlighting the progress of student founders in clean energy.",
+    date: "2024",
+    readTime: "View post",
+    icon: Link2,
+    tag: "Professional",
+    tagBg: "bg-blue-50",
+    tagText: "text-blue-700",
+    accentBorder: "border-l-blue-400",
+    href: "https://www.linkedin.com/company/kenya-climate-innovation-center",
+  },
+  {
+    type: "Profile",
+    title: "Team LinkedIn Profiles",
+    excerpt:
+      "Detailed timelines of the project are visible on the accounts of team members. Founder Job Ian Onyango's LinkedIn cites his leadership of ITEDA Solutions since 2021 and his experience within the Efficiency for Access design cycles.",
+    date: "Ongoing",
+    readTime: "View profiles",
+    icon: Link2,
+    tag: "Professional",
+    tagBg: "bg-primary/10",
+    tagText: "text-primary",
+    accentBorder: "border-l-primary",
+    href: "https://www.linkedin.com/company/iteda-solutions",
   },
 ];
 
@@ -742,15 +756,15 @@ export default function OurStoryPage() {
             <div className="mb-10 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
               <div>
                 <h2 className="text-3xl font-bold md:text-4xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent inline-block">
-                  Publications & Insights
+                  Official Publications & Media
                 </h2>
                 <div className="mt-2 h-1 w-20 rounded-full bg-gradient-to-r from-primary to-accent" />
                 <p className="mt-3 text-text-light">
-                  Thinking out loud on agriculture, tech, and impact.
+                  Featured in university news, international programs, and media coverage.
                 </p>
               </div>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/iteda-solutions"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary-dark transition-colors hover:no-underline flex-shrink-0"
