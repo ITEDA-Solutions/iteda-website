@@ -204,69 +204,69 @@ const publications = [
   },
 ];
 
-// Gallery items — first item uses the real photo, rest use styled placeholders
+// Gallery items — team and event photos
 const galleryItems = [
   {
-    realImage: "/hero-solar-dryer.jpg",
-    label: "Smart Solar Crop Dryer",
-    sublabel: "Nakuru Pilot — 2021",
+    realImage: "/images/team-1.png",
+    label: "Team Photo",
+    sublabel: "ITEDA Solutions Founders",
     emoji: null,
     gradient: "from-primary-dark/80 to-primary/60",
     size: "large", // col-span-2 row-span-2
   },
   {
-    realImage: null,
-    label: "Community Training",
-    sublabel: "Kisumu Farmers' Cooperative",
-    emoji: "👥",
+    realImage: "/images/team-2.png",
+    label: "Team Collaboration",
+    sublabel: "Working together",
+    emoji: null,
     gradient: "from-primary/30 to-primary-light/20",
     size: "normal",
   },
   {
-    realImage: null,
-    label: "IoT Sensor Lab",
-    sublabel: "Calibration & QA",
-    emoji: "📡",
+    realImage: "/images/team-3.png",
+    label: "Project Development",
+    sublabel: "Building the solution",
+    emoji: null,
     gradient: "from-accent-gold/30 to-accent/20",
     size: "normal",
   },
   {
-    realImage: null,
-    label: "Farmer Onboarding",
-    sublabel: "Meru County, Kenya",
-    emoji: "🧑‍🌾",
+    realImage: "/images/team-4.png",
+    label: "Team Meeting",
+    sublabel: "Strategic planning",
+    emoji: null,
     gradient: "from-primary-light/30 to-primary-dark/20",
     size: "tall", // row-span-2
   },
   {
-    realImage: null,
-    label: "Market-Ready Harvest",
-    sublabel: "Post-drying quality check",
-    emoji: "🌽",
+    realImage: "/images/team-5.png",
+    label: "Innovation in Action",
+    sublabel: "Prototyping phase",
+    emoji: null,
     gradient: "from-accent/30 to-accent-gold/20",
     size: "normal",
   },
   {
-    realImage: null,
-    label: "AgriTech Awards 2025",
-    sublabel: "East Africa Innovation Prize",
-    emoji: "🏆",
+    realImage: "/images/team-6.png",
+    label: "Celebration",
+    sublabel: "Award recognition",
+    emoji: null,
     gradient: "from-primary-dark/30 to-primary/20",
     size: "normal",
   },
   {
-    realImage: null,
-    label: "Solar Panel Array",
-    sublabel: "Off-grid power system",
-    emoji: "☀️",
+    realImage: "/images/team-7.png",
+    label: "Field Work",
+    sublabel: "Testing with farmers",
+    emoji: null,
     gradient: "from-accent-gold/20 to-primary/20",
     size: "normal",
   },
   {
-    realImage: null,
-    label: "bridGe Demo Day",
-    sublabel: "Nairobi, February 2024",
-    emoji: "💳",
+    realImage: "/images/team-8.png",
+    label: "Team Spirit",
+    sublabel: "Together we grow",
+    emoji: null,
     gradient: "from-primary/20 to-accent/20",
     size: "normal",
   },
@@ -698,11 +698,11 @@ export default function OurStoryPage() {
             <div className="mb-10 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
               <div>
                 <h2 className="text-3xl font-bold md:text-4xl bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent inline-block">
-                  Life at ITEDA
+                  Team Gallery
                 </h2>
                 <div className="mt-2 h-1 w-20 rounded-full bg-gradient-to-r from-accent to-primary" />
                 <p className="mt-3 text-text-light">
-                  In the fields, in the lab, and in the communities we serve.
+                  Moments from our journey — collaboration, innovation, and celebration.
                 </p>
               </div>
               <div className="flex items-center gap-2 text-sm text-text-muted">
