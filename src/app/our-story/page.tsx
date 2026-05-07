@@ -24,52 +24,77 @@ import {
 
 const timelineEvents = [
   {
-    year: "2020",
-    title: "The Idea Sparks",
+    year: "2021",
+    title: "ITEDA Solutions is Founded",
     description:
-      "Born from a simple observation — tonnes of harvested crops were rotting due to inadequate drying infrastructure. Our founders set out to change that with IoT-powered precision.",
+      "Job Ian Onyango founds ITEDA Solutions, bootstrapping a number of innovative solutions. While these early concepts never left the ideation phase, they laid the groundwork for what was to come.",
     icon: Lightbulb,
     accent: "#028037",
   },
   {
-    year: "2021",
-    title: "First Prototype",
+    year: "2022",
+    title: "Team Growth & First Competition",
     description:
-      "After months of research and fieldwork with smallholder farmers across Kenya, we built our first solar-powered crop dryer prototype and tested it with maize farmers in Nakuru.",
-    icon: Sprout,
+      "Isaiah Ochieng joins the team, bringing new energy and expertise. The team works on various ideas, entering the Ideas Festival 2022 and progressing to the semi-finals rounds.",
+    icon: Users,
     accent: "#2E9F5F",
   },
   {
-    year: "2022",
-    title: "Community Pilots",
+    year: "2023",
+    title: "Efficiency for Access Design Challenge",
     description:
-      "We partnered with three farming cooperatives to run pilots at scale. Post-harvest losses dropped by up to 60% in participating communities.",
-    icon: Users,
+      "Under the guidance of Mr. Joseph Obbo, the team enters the Efficiency for Access Design Challenge 2023-2024 with their Smart Solar Crop Dryer idea, marking a pivotal moment in the company's development.",
+    icon: Sprout,
     accent: "#aa9241",
   },
   {
-    year: "2023",
-    title: "bridGe Launches",
+    year: "2024",
+    title: "Breakthrough Year",
     description:
-      "Recognising that payment friction stifled agri-business growth, we launched bridGe — bringing M-Pesa and card payments directly into Google Forms.",
-    icon: Zap,
+      "Team wins Silver award in the Efficiency for Access Design Challenge, secures a prototyping award to build the first prototype, and earns a spot in the 2024-2025 Accelerator Programme. Also places 4th in the Ideas Festival and represents Strathmore University at the Tricontinental Hackathon at the University of Notre Dame.",
+    icon: Award,
     accent: "#FCD85D",
   },
   {
-    year: "2024",
-    title: "Expanding Across East Africa",
+    year: "2025",
+    title: "Global Recognition & Growth",
     description:
-      "With operations in Kenya, Uganda, and Tanzania, ITEDA Solutions now serves thousands of farmers, processors, and agri-businesses.",
+      "Wins the Tricontinental Hackathon at the University of Notre Dame and secures the Large Grant from the Efficiency for Access Design Challenge Accelerator Programme, transitioning from a student project to a rising agritech startup focused on mass production and field trials.",
     icon: Globe,
     accent: "#028037",
   },
+];
+
+const teamMembers = [
   {
-    year: "2025",
-    title: "Recognised for Impact",
-    description:
-      "Named among East Africa's top agri-tech innovators, we continue to push the frontier — building smarter, greener, connected food systems.",
-    icon: Award,
-    accent: "#01443e",
+    name: "Job Ian Onyango",
+    role: "Founder & Lead",
+    description: "Founded ITEDA Solutions in 2021, leading the vision from ideation to global recognition.",
+    emoji: "👨‍💼",
+  },
+  {
+    name: "Isaiah Ochieng",
+    role: "Co-Founder",
+    description: "Joined in 2022, bringing technical expertise and helping scale the Smart Solar Crop Dryer concept.",
+    emoji: "👨‍🔬",
+  },
+  {
+    name: "Ruman Hassan",
+    role: "Co-Founder",
+    description: "Key contributor to the smart technology integration and sensor systems.",
+    emoji: "👨‍💻",
+  },
+  {
+    name: "Ronit Mepani",
+    role: "Co-Founder",
+    description: "Instrumental in business development and partnership building.",
+    emoji: "👩‍💼",
+  },
+  {
+    name: "Emmanuel Sintila Lekatoo",
+    role: "Co-Founder",
+    description: "Contributed to field testing and farmer engagement strategies.",
+    emoji: "👨‍🌾",
   },
 ];
 
@@ -110,88 +135,88 @@ const values = [
 
 const publications = [
   {
-    type: "Blog",
-    title: "How IoT Is Cutting Post-Harvest Losses in Sub-Saharan Africa",
+    type: "External",
+    title: "Efficiency for Access Design Challenge Winners",
     excerpt:
-      "A deep dive into the data behind crop spoilage and how precision drying changes the economics of smallholder farming.",
-    date: "March 2025",
-    readTime: "6 min read",
-    icon: BookOpen,
-    tag: "Research",
+      "ITEDA Solutions wins Silver Award in the prestigious global competition for clean energy access innovations.",
+    date: "2024",
+    readTime: "View article",
+    icon: ExternalLink,
+    tag: "Award",
     tagBg: "bg-primary/10",
     tagText: "text-primary",
     accentBorder: "border-l-primary",
-    href: "#",
+    href: "https://efficiencyforaccess.org/efficiency-for-access-design-challenge-winning-teams/",
   },
   {
-    type: "LinkedIn",
-    title: "Lessons from 3 Years of Building AgriTech in Kenya",
+    type: "External",
+    title: "Strathmore Students Poised to Shine",
     excerpt:
-      "What we got wrong, what surprised us, and why farmers are the best product managers we've ever worked with.",
-    date: "February 2025",
-    readTime: "4 min read",
-    icon: Link2,
-    tag: "Insights",
+      "Team emerges 4th in the Ideas Festival competition, showcasing innovation on the global sustainability stage.",
+    date: "2024",
+    readTime: "View article",
+    icon: ExternalLink,
+    tag: "Competition",
     tagBg: "bg-blue-50",
     tagText: "text-blue-700",
     accentBorder: "border-l-blue-400",
-    href: "#",
+    href: "https://strathmore.edu/news-articles/strathmore-students-poised-to-shine-at-global-sustainability-competition/",
   },
   {
-    type: "Blog",
-    title: "bridGe: Why We Built Payments Into a Google Form",
+    type: "External",
+    title: "Strathmore Students' Solar Innovation Takes Top Prize",
     excerpt:
-      "The story behind our simplest product — and how zero lines of code can unlock revenue for agri-businesses.",
-    date: "December 2024",
-    readTime: "5 min read",
-    icon: BookOpen,
-    tag: "Product",
+      "Team wins the Tricontinental Hackathon at the University of Notre Dame with their smart solar crop dryer.",
+    date: "2025",
+    readTime: "View article",
+    icon: ExternalLink,
+    tag: "Achievement",
     tagBg: "bg-accent/20",
     tagText: "text-accent-gold",
     accentBorder: "border-l-accent",
-    href: "#",
+    href: "https://www.linkedin.com/pulse/strathmore-students-solar-innovation-takes-top-prize-go4zf?lipi=urn%3Ali%3Apage%3Ad_flagship3_series_entity%3BxqkVV7VDSv2vFUIxKpZtWA%3D%3D",
   },
   {
-    type: "LinkedIn",
-    title: "What 60% Less Post-Harvest Loss Actually Looks Like",
+    type: "External",
+    title: "Efficiency for Access Accelerator Programme",
     excerpt:
-      "Real numbers, real farmers, real change. Our Nakuru pilot results and what they mean for food security.",
-    date: "October 2024",
-    readTime: "3 min read",
-    icon: Link2,
-    tag: "Impact",
+      "ITEDA Solutions secures Large Grant and joins the prestigious 2024-2025 accelerator programme.",
+    date: "2025",
+    readTime: "View article",
+    icon: ExternalLink,
+    tag: "Grant",
     tagBg: "bg-primary/10",
     tagText: "text-primary",
     accentBorder: "border-l-primary",
-    href: "#",
+    href: "https://efficiencyforaccess.org/efficiency-for-access-design-challenge-2024-2025/accelerator-programme/",
   },
   {
-    type: "Blog",
-    title: "Solar + Sensors: The Architecture of Our Crop Dryer",
+    type: "External",
+    title: "Energy Catalyst News Feature",
     excerpt:
-      "A technical walkthrough of the hardware and firmware stack powering our Smart Solar Crop Dryer.",
-    date: "August 2024",
-    readTime: "8 min read",
-    icon: BookOpen,
-    tag: "Technical",
+      "UK government highlights Efficiency for Access Design Challenge Accelerator Programme participants.",
+    date: "2024",
+    readTime: "View article",
+    icon: ExternalLink,
+    tag: "Media",
     tagBg: "bg-primary-dark/10",
     tagText: "text-primary-dark",
     accentBorder: "border-l-primary-dark",
-    href: "#",
+    href: "https://energycatalyst.ukri.org/news/efficiency-for-access-design-challenge-accelerator-programme/",
   },
   {
-    type: "LinkedIn",
-    title: "East Africa's AgriTech Moment Is Now",
+    type: "Social",
+    title: "Efficiency for Access Coalition Twitter",
     excerpt:
-      "Why mobile money, affordable sensors, and climate urgency make this the most important decade for African food systems.",
-    date: "June 2024",
-    readTime: "5 min read",
+      "Official announcement and recognition of ITEDA Solutions' achievements in the design challenge.",
+    date: "2024",
+    readTime: "View post",
     icon: Link2,
-    tag: "Opinion",
+    tag: "Social Media",
     tagBg: "bg-blue-50",
     tagText: "text-blue-700",
     accentBorder: "border-l-blue-400",
-    href: "#",
+    href: "https://x.com/EforA_Coalition/status/1803005964846592050?s=20",
   },
 ];
 
@@ -459,19 +484,17 @@ export default function OurStoryPage() {
         <div className="container relative mx-auto px-4 text-center">
           <div className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/20 px-5 py-2 text-sm font-medium text-white/90 backdrop-blur-sm mb-8">
             <Sprout className="h-4 w-4 text-accent" />
-            Est. 2020 · Nairobi, Kenya
+            Est. 2021 · Strathmore University, Nairobi
           </div>
 
           <h1 className="text-5xl font-bold text-white md:text-7xl leading-[1.1] tracking-tight">
-            Rooted in Fields,
+            From Student Project
             <br />
-            <span className="text-accent">Grown by Purpose</span>
+            <span className="text-accent">to Agritech Innovation</span>
           </h1>
 
           <p className="mt-6 mx-auto max-w-2xl text-lg text-white/75 md:text-xl leading-relaxed">
-            ITEDA Solutions began with a single conviction — that the right
-            technology, designed with empathy, can transform the lives of
-            millions of farmers across Africa.
+            A team of Strathmore University students turned a classroom concept into a groundbreaking solution for smallholder farmers, winning global recognition and transforming post-harvest agriculture in East Africa.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -506,39 +529,25 @@ export default function OurStoryPage() {
 
             <div className="space-y-5 text-lg leading-relaxed text-text-light">
               <p>
-                Agriculture feeds the world, yet the farmers who grow our food
-                often lose a staggering share of their harvest before it ever
-                reaches a market. In Kenya alone, post-harvest losses cost
-                smallholder farmers over{" "}
-                <strong className="text-text font-semibold">
-                  $300 million every year
-                </strong>{" "}
-                — not because of drought or disease, but because of something
-                entirely preventable: inadequate drying.
+                In the heart of Nairobi at Strathmore University, a team of forward-thinking students observed a devastating reality for Kenya's smallholder farmers. Every harvest season, farmers worked tirelessly to grow maize, only to lose up to a third of their yield to spoilage and mold because they lacked fast, reliable ways to dry their crops. Traditional open-air sun drying was at the mercy of unpredictable weather and pests.
               </p>
               <p>
-                Our founders witnessed this first-hand, watching communities
-                work from dawn to dusk only to see their maize spoil in storage.
-                They asked a simple question: what if we could wrap precision
-                drying intelligence around the power of the sun?
+                Driven to find a sustainable solution, <strong className="text-text font-semibold">Job Ian Onyango, Isaiah Ochieng, Ruman Hassan, Ronit Mepani, and Emmanuel Sintila Lekatoo</strong> came together to form ITEDA Solutions.
               </p>
               <p>
-                That question became ITEDA Solutions — a company built on the
-                belief that{" "}
-                <strong className="text-text font-semibold">
-                  technology&apos;s highest calling is human dignity
-                </strong>
-                . Every sensor we ship, every line of code we write, every
-                partnership we forge is in service of that belief.
+                The team recognized that while solar energy was abundant in rural Kenya, simple sun drying was no longer enough to support modern agricultural demands. They set out to engineer a smarter system specifically tailored for off-grid, smallholder farmers.
+              </p>
+              <p>
+                Their solution was a modular solar dryer. Unlike massive, expensive industrial dryers, ITEDA's design was built to be scalable and affordable. They integrated smart technology into the units, using sensors and microcontrollers to actively monitor and regulate temperature and humidity. This automation ensured that crops dried at the perfect rate, preserving nutritional value and completely eliminating the threat of aflatoxin-producing molds.
               </p>
             </div>
 
             {/* Stats */}
             <div className="mt-12 grid grid-cols-3 gap-4 md:gap-6">
               {[
-                { value: "60%", label: "Reduction in post-harvest loss" },
-                { value: "10K+", label: "Farmers impacted" },
-                { value: "3", label: "Countries & growing" },
+                { value: "30%", label: "Yield loss to spoilage prevented" },
+                { value: "2024", label: "Efficiency for Access Silver Award" },
+                { value: "2025", label: "Tricontinental Hackathon Winners" },
               ].map((stat) => (
                 <div
                   key={stat.label}
@@ -550,6 +559,43 @@ export default function OurStoryPage() {
                   <div className="mt-1 text-xs md:text-sm text-text-light leading-tight">
                     {stat.label}
                   </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── TEAM ─────────────────────────────────────────────────────────── */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-5xl">
+            <div className="mb-14 text-center">
+              <h2 className="text-3xl font-bold md:text-4xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent inline-block">
+                Meet the Team
+              </h2>
+              <div className="mt-2 mx-auto h-1 w-20 rounded-full bg-gradient-to-r from-primary to-accent" />
+              <p className="mt-4 text-text-light">
+                The forward-thinking students from Strathmore University who turned a vision into reality.
+              </p>
+            </div>
+
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {teamMembers.map((member) => (
+                <div
+                  key={member.name}
+                  className="group rounded-2xl bg-white border border-gray-100 p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                >
+                  <div className="mb-4 text-5xl">{member.emoji}</div>
+                  <h3 className="font-bold text-text text-lg group-hover:text-primary transition-colors">
+                    {member.name}
+                  </h3>
+                  <p className="text-sm font-semibold text-primary mb-2">
+                    {member.role}
+                  </p>
+                  <p className="text-sm text-text-light leading-relaxed">
+                    {member.description}
+                  </p>
                 </div>
               ))}
             </div>
