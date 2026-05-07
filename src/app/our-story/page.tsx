@@ -130,7 +130,7 @@ const publications = [
     tagBg: "bg-primary/10",
     tagText: "text-primary",
     accentBorder: "border-l-primary",
-    href: "https://strathmore.edu/news-articles/strathmore-students-solar-innovation-takes-top-prize-go4zf?lipi=urn%3Ali%3Apage%3Ad_flagship3_series_entity%3BxqkVV7VDSv2vFUIxKpZtWA%3D%3D",
+    href: "https://strathmore.edu/news-articles/strathmore-students-solar-innovation-takes-top-prize/",
   },
   {
     type: "Official",
@@ -144,7 +144,7 @@ const publications = [
     tagBg: "bg-accent/20",
     tagText: "text-accent-gold",
     accentBorder: "border-l-accent",
-    href: "https://efficiencyforaccess.org/efficiency-for-access-design-challenge-2024-2025/accelerator-programme/",
+    href: "https://efficiencyforaccess.org/updates/announcing-the-second-efficiency-for-access-design-challenge-accelerator-programme-cohort/",
   },
   {
     type: "Official",
@@ -158,21 +158,21 @@ const publications = [
     tagBg: "bg-primary-dark/10",
     tagText: "text-primary-dark",
     accentBorder: "border-l-primary-dark",
-    href: "https://energycatalyst.ukri.org/news/efficiency-for-access-design-challenge-accelerator-programme/",
+    href: "https://energycatalyst.ukri.org/news/celebrating-innovation-announcing-the-2025-efficiency-for-access-design-challenge-accelerator-programme-cohort/",
   },
   {
     type: "Social",
     title: "Strathmore University #ResearchWednesday",
     excerpt:
-      "Dedicated Facebook post highlighted ITEDA Solutions under their #ResearchWednesday campaign, celebrating the game-changing potential of the dryer in combating food security and empowering women in agriculture.",
-    date: "2024",
+      "Dedicated Facebook post highlighted ITEDA Solutions under their #ResearchWednesday campaign, celebrating the big win at the Tri-Continental Student Innovation for Sustainability Competition.",
+    date: "2025",
     readTime: "View post",
     icon: Link2,
     tag: "Social Media",
     tagBg: "bg-blue-50",
     tagText: "text-blue-700",
     accentBorder: "border-l-blue-400",
-    href: "https://www.facebook.com/StrathmoreUniversity",
+    href: "https://www.facebook.com/StrathmoreUniversity/posts/researchwednesdaybig-win-for-strathmore-university-at-the-tri-continental-sustai/1084883810348097/",
   },
   {
     type: "Social",
@@ -186,7 +186,7 @@ const publications = [
     tagBg: "bg-blue-50",
     tagText: "text-blue-700",
     accentBorder: "border-l-blue-400",
-    href: "https://www.instagram.com/strathmoreresearch",
+    href: "https://www.instagram.com/p/DHd0hxFMNaD/",
   },
   {
     type: "Social",
@@ -200,7 +200,7 @@ const publications = [
     tagBg: "bg-blue-50",
     tagText: "text-blue-700",
     accentBorder: "border-l-blue-400",
-    href: "https://www.linkedin.com/company/kenya-climate-innovation-center",
+    href: "https://www.linkedin.com/posts/kenyaclimateinnovationcenter_dreemprogramme-cleanenergy-climatesmartagriculture-activity-7436711814840770560-1Tru",
   },
   {
     type: "Profile",
