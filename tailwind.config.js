@@ -13,7 +13,10 @@ module.exports = {
           dark: "#246B4C",
           light: "#3FA675",
         },
-        accent: "#1E5A42",
+        accent: {
+          DEFAULT: "#1E5A42",
+          gold: "#aa9241",
+        },
         background: "#F5F5F0",
         muted: "#6B7280",
         success: "#10B981",

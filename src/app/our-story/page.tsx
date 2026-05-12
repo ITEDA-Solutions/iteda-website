@@ -4,7 +4,6 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  BookOpen,
   ExternalLink,
   ChevronLeft,
   ChevronRight,
@@ -13,7 +12,6 @@ import {
   Users,
   Globe,
   Award,
-  Zap,
   X,
   Camera,
   Play,
@@ -719,10 +717,10 @@ export default function OurStoryPage() {
                   Moments from our journey — collaboration, innovation, and celebration.
                 </p>
               </div>
-              <div className="flex items-center gap-2 text-sm text-text-muted">
+              <div className="flex items-center gap-2 text-sm text-muted">
                 <Camera className="h-4 w-4" />
                 <span>{galleryItems.length} photos</span>
-                <span className="text-text-muted/40">·</span>
+                <span className="text-muted/40">·</span>
                 <span>Click to expand</span>
               </div>
             </div>
@@ -790,7 +788,7 @@ export default function OurStoryPage() {
                       >
                         {pub.tag}
                       </span>
-                      <div className="flex items-center gap-1.5 text-text-muted">
+                      <div className="flex items-center gap-1.5 text-muted">
                         <Icon className="h-3.5 w-3.5" />
                         <span className="text-xs">{pub.type}</span>
                       </div>
@@ -806,12 +804,12 @@ export default function OurStoryPage() {
                     </div>
 
                     <div className="flex items-center justify-between px-5 py-3.5 border-t border-gray-50">
-                      <div className="flex items-center gap-2 text-xs text-text-muted">
+                      <div className="flex items-center gap-2 text-xs text-muted">
                         <span>{pub.date}</span>
                         <span>·</span>
                         <span>{pub.readTime}</span>
                       </div>
-                      <ExternalLink className="h-3 w-3 text-text-muted group-hover:text-primary transition-colors" />
+                      <ExternalLink className="h-3 w-3 text-muted group-hover:text-primary transition-colors" />
                     </div>
                   </a>
                 );
