@@ -78,19 +78,19 @@ const teamMembers = [
   },
   {
     name: "Ruman Hassan",
-    role: "Co-Founder",
+    role: "Software Developer",
     description: "Key contributor to the smart technology integration and sensor systems.",
     emoji: "👨‍💻",
   },
   {
     name: "Ronit Mepani",
-    role: "Co-Founder",
+    role: "Software Developer",
     description: "Instrumental in business development and partnership building.",
     emoji: "👩‍💼",
   },
   {
     name: "Emmanuel Sintila Lekatoo",
-    role: "Co-Founder",
+    role: "Engineer",
     description: "Contributed to field testing and farmer engagement strategies.",
     emoji: "👨‍🌾",
   },
